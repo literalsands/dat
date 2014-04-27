@@ -11,6 +11,8 @@ var fs = require('fs')
 var debug = require('debug')('dat.cli')
 
 var opts = optimist.usage("Usage: $0 <command> [<args>]" + EOL + EOL + "Enter 'dat help' for help")
+optimist.boolean('csv')
+optimist.boolean('json')
 var datCommand = cli.command(opts)
 
 var first = opts.argv._[0] || ''
